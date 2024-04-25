@@ -1,16 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Roboto+Slab:wght@100..900&display=swap');
+
+:root {
+  --primary-color: #192706;
+  --primary-color-dark: #192706;
+  --text-dark: #0c0a09;
+  --text-light: #78716c;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 img{
   width: 60%;
   align-self: center;
 }
 
-.card{
-  border: rgb(103, 102, 105) 3px solid;
-  display: flex;  
-  flex-direction: column;
-  margin-left:5%;
-  margin-right:5%;
-  margin-top: 1%;
-  margin-bottom: 1%;
+.logo {
+  max-width: 120px;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.about__card{
+  margin-top: 4rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.team__card{
+  padding: 1rem;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.team__card-img-top{
+  position: relative;
+  isolation: isolate;
+}
+
+.team__card-body{
+  padding: 1rem;
+}
+
+.team__card h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.team__card-body p {
+  margin-bottom: 0.5rem;
+  color: var(--text-light);
+  text-align: justify;
+}
+
+.team__card h5 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+.section__subheader {
+    margin-bottom: 0.5rem;
+    position: relative;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: var(--text-dark);
+}
+  
+.section__subheader::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    transform: translate(1rem, -50%);
+    height: 2px;
+    width: 4rem;
+    background-color: var(--primary-color);
+}
+  
+.section__header {
+    max-width: 600px;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 3rem;
+    color: var(--text-dark);
 }
 
 .row{
@@ -35,7 +124,7 @@ img{
 .title{
   font-size: 20px;
   background-color: rgb(97, 64, 128);
-  color: white;
+  color: #F8F8FF;
   text-align: center;
   margin:20px;
   padding:5px;
@@ -54,11 +143,14 @@ img{
 }
 
 .banner{
+  padding: 2rem;
   display: flex;
-  flex-direction: column;
+  gap: 2rem;
   align-items: center;
-  justify-content: center;
-  flex:1
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .form_panel {
@@ -72,7 +164,7 @@ img{
   min-width: 350px;
   width: 80%;
   margin-top:3%;
-  background-color: black;
+  background-color: #130e09;
 }
 
 .navitems{
@@ -87,13 +179,13 @@ img{
 .nav_item{
   margin-left:15px;
   font-size: 20px;
-  color: black;
+  color: #130e09;
   align-self: center;
 }
 
 .username{
   font: 30px sans-serif;
-  color:black;
+  color:#130e09;
   justify-content: 'flex-end';
   align-self:flex-end;
   vertical-align: middle;
@@ -111,7 +203,7 @@ img{
 
 .small_header{
   font: 30px sans-serif;
-  color:black;
+  color:#130e09;
   margin: .5cm;
 }
 
@@ -119,7 +211,7 @@ img{
   align-self: center;
     width:40px;
     background-color:#0C9;
-    color:#FFF;
+    color:#F8F8FF;;
     border-radius:50px;
     text-align:center;
     box-shadow: 2px 2px 3px #999;  

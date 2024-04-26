@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Roboto+Slab:wght@100..900&display=swap');
 
 :root {
-  --primary-color: #192706;
-  --primary-color-dark: #192706;
-  --text-dark: #0c0a09;
+  --primary-color: #C19446;
+  --primary-color-dark: #C19446;
+  --text-dark: #130E09;
   --text-light: #78716c;
-  --white: #ffffff;
+  --white: #F8F8FF;
   --max-width: 1200px;
 }
 
@@ -13,7 +13,80 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Kode Mono', monospace;
 }
+
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: #130E09;
+}
+
+h2 {
+  font-size: 46px;
+  line-height: 64px;
+  color: #130E09;
+}
+
+h4 {
+  font-size: 20px;
+  color: #130E09;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: #130E09;
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+button.normal {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 30px;
+  color: #130E09;
+  background-color: #F8F8FF;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+}
+
+button.white {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 11px 18px;
+  color: #F8F8FF;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid #F8F8FF;
+  outline: none;
+  transition: 0.2s;
+}
+
+body {
+  width: 100%;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+/* Header Start */
 
 img{
   width: 60%;
@@ -24,14 +97,7 @@ img{
   max-width: 120px;
 }
 
-html,
-body {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
-}
+/* About Us Start */
 
 .about__card{
   margin-top: 4rem;

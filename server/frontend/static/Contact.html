@@ -9,18 +9,25 @@
 
 <body>
 
-    <section id="header">
-        <a href="#"><img src="/server/frontend/static/logo.png" class="logo" alt="logo"></a>
-
-        <div>
+    <section id="header" class="section-p1">
+        <div class="container-fluid">
+          <div class="logo">
+            <a href="#"><img src="/server/frontend/static/logo.png" alt="logo"></a>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div>
             <ul id="navbar">
-                <li><a href="Home.html">Home</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a class="active" href="Contact.html">Contact</a></li>
-                <a href="#" id="close"><i class="far fa-times"></i></a>
+              <li><a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a></li>
+              <li><a class="nav-link" style="font-size: larger;" href="/about">About Us</a></li>
+              <li><a class="nav-link active" style="font-size: larger;" href="/contact">Contact Us</a></li>
             </ul>
+          </div>
+          
         </div>
-    </section>
+      </section>
 
     <section id="page-header" class="about-header">
 

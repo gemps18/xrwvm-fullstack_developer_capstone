@@ -4,35 +4,43 @@
 <head>
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/bootstrap.min.css">
+    
+    <script>
+        let menu = document.querySelector('#menu-icon');
+        let navbar = document.querySelector('.navbar');
+
+        menu.onclick = () => {
+            menu.classList.toggle('bx-x');
+            navbar.classList.toggle('open');
+        }
+    </script>
 </head>
 
+<body onload="checkSession()">
+<header>
+    <a href="#" class="logo"><img src="static/logo.png" alt="logo"></a>
 
-<body>
+      <ul class="navbar">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/contact" class="active">Contact Us</a></li>
+      </ul>
 
-    <section id="header" class="section-p1">
-        <div class="container-fluid">
-          <div class="logo">
-            <a href="#"><img src="/server/frontend/static/logo.png" alt="logo"></a>
-          </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-    
-          <div>
-            <ul id="navbar">
-              <li><a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a></li>
-              <li><a class="nav-link" style="font-size: larger;" href="/about">About Us</a></li>
-              <li><a class="nav-link active" style="font-size: larger;" href="/contact">Contact Us</a></li>
-            </ul>
-          </div>
-          
+      <div class="main">
+        <a href="#" class="user"><i class="ri-user-fill"></i>Login</a>
+        <a href="#">Register</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+      </div>
+</header>
+
+    <section class="explore" id="explore">
+        <p class="section__subheader">Any inquiries?</p>
+        <h2 class="section__header">LEAVE A MESSAGE!!</h2>
+        <div style="display: flex;flex-direction: column;">
+            <div class="card" style="width: 100%;margin-top: 50px;align-self: center;">
+              <img src="static/cars.jpeg" class="card-img-top" alt="...">
+            </div>
         </div>
-      </section>
-
-    <section id="page-header" class="about-header">
-
-        <p>Any inquiries? LEAVE A MESSAGE!! </p>
-
     </section>
 
     <section id="form-details">
@@ -42,7 +50,7 @@
             <input type="text" placeholder="Your Name">
             <input type="text" placeholder="E-mail">
             <input type="text" placeholder="Subject">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <textarea name="" id="" cols="10" rows="8" placeholder="Your Message"></textarea>
             <button class="normal">Submit</button>
         </form>
 
@@ -62,17 +70,6 @@
             <div>
                 <p><span>Become a Best Cars Dealer</span> visit: growwithbestcars.com <br></p>
             </div>
-        </div>
-    </section>
-
-    <section id="newsletter" class="section-p1 section-m1">
-        <div class="newstext">
-            <h4>Sign Up For Newsletters</h4>
-            <p>Get E-mail updates about our latest deals and <span>special offers.</span> </p>
-        </div>
-        <div class="form">
-            <input type="text" placeholder="Your email address">
-            <button class="normal">Sign Up</button>
         </div>
     </section>
 

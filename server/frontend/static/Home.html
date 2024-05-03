@@ -13,41 +13,41 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
 
-<script>
+  <script>
 
-const logout = async (e) => {
-//Include the code for logout here.
-};
+  const logout = async (e) => {
+  //Include the code for logout here.
+  };
 
-let checkSession = ()=>{
-  let curr_user = sessionStorage.getItem("username");
+  let checkSession = ()=>{
+    let curr_user = sessionStorage.getItem("username");
 
-  if (curr_user && curr_user !== "") {
-    document.getElementById("loginlogout").innerHTML = 
-    '<span class="homepage_links">' + curr_user +'</span>' +
-    '<a class="homepage_links" onclick="logout()" href="/">Logout</a>'
-  } else {
-    document.getElementById("loginlogout").innerHTML = 
-    '<a class="homepage_links" href="/login">Login</a>'+
-    '<a class="homepage_links"  href="/register">Register</a>'
+    if (curr_user && curr_user !== "") {
+      document.getElementById("loginlogout").innerHTML = 
+      '<span class="homepage_links">' + curr_user +'</span>' +
+      '<a class="homepage_links" onclick="logout()" href="/">Logout</a>'
+    } else {
+      document.getElementById("loginlogout").innerHTML = 
+      '<a class="homepage_links" href="/login">Login</a>'+
+      '<a class="homepage_links"  href="/register">Register</a>'
+    }
+   }
+
+  let menu = document.querySelector('#menu-icon');
+  let navbar = document.querySelector('.navbar');
+
+  menu.onclick = () => {
+      menu.classList.toggle('bx-x');
+      navbar.classList.toggle('open');
   }
- }
-
-let menu = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
-
-menu.onclick = () => {
-    menu.classList.toggle('bx-x');
-    navbar.classList.toggle('open');
-}
-</script>
+  </script>
 </head>
 <body onload="checkSession()">
 <header>
     <a href="#" class="logo"><img src="static/logo.png" alt="logo"></a>
 
       <ul class="navbar">
-        <li><a href="#" class="active">Home</a></li>
+        <li><a href="/" class="active">Home</a></li>
         <li><a href="/about">About Us</a></li>
         <li><a href="/contact">Contact Us</a></li>
       </ul>
@@ -63,9 +63,14 @@ menu.onclick = () => {
   <img src="static/car_dealership.jpg" class="card-img-top" alt="...">
   <div class="banner">
     <h5>Welcome to our Dealerships!</h5>
-    <a href="/dealers" class="btn" style="background-color: aqua;margin:10px">View Dealerships</a>
+    <a href="/dealers" class="btn" style="background-color: gold;margin:10px">View Dealerships</a>
   </div>
 </div>
 </div>
+<footer class="section-p1">
+<div class="copyright">
+    <p>© 2024, gemps18 - IBM FULLSTACK DEVELOPER CAPSTONE PROJECT</p>
+</div>
+</footer>
 </body>
 </html>

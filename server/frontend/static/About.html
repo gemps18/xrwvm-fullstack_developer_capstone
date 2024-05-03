@@ -4,24 +4,34 @@
 <head>
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/bootstrap.min.css">
+
+    <script>
+        let menu = document.querySelector('#menu-icon');
+        let navbar = document.querySelector('.navbar');
+
+        menu.onclick = () => {
+            menu.classList.toggle('bx-x');
+            navbar.classList.toggle('open');
+        }
+    </script>
 </head>
 
+<body onload="checkSession()">
+<header>
+    <a href="#" class="logo"><img src="static/logo.png" alt="logo"></a>
 
-<body>
+      <ul class="navbar">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about" class="active">About Us</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+      </ul>
 
-  <section id="header">
-        <a href="#"><img src="static/logo.png" alt="logo"></a>
-    <div class="container-fluid">
-        <ul id="navbar">
-          <li><a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a></li>
-          <li><a class="nav-link active" style="font-size: larger;" href="/about">About Us</a></li>
-          <li><a class="nav-link" style="font-size: larger;" href="/contact">Contact Us</a></li>
-        </ul>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </div>
-  </section>
+      <div class="main">
+        <a href="#" class="user"><i class="ri-user-fill"></i>Login</a>
+        <a href="#">Register</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+      </div>
+</header>
   
     <section id="about-header" class="section-p1">
 
